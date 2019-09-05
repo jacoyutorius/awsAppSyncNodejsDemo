@@ -73,7 +73,7 @@ client.hydrated().then(function (client) {
       fetchPolicy: 'network-only' //Uncomment for AWS Lambda
     })
     .then(function logData(data) {
-      console.log('results of query: ', data);
+      console.log('results of query: ', data.data);
       console.log(data.data.queryBackbarsByGsiKeywords.items)
     })
     .catch(console.error);
