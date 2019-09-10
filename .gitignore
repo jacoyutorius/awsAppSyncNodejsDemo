@@ -1,2 +1,2 @@
 node_modules
-aws-exports.js
+libs/aws-exports.js
