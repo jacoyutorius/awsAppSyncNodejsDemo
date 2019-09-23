@@ -15,8 +15,22 @@ $ aws appsync get-graphql-api --api-id #{API_ID}
         }
     }
 }
+```
+
+## dev in local
 
 ```
+export DYNAMODB_ENDPOINT=http://localhost:8002
+docker-compose up
+bundle install
+bundle exec ruby migration/create_backbar.rb
+bundle exec ruby migration/seed.rb
+```
+
+|                |                             |
+| :------------- | :-------------------------- |
+| DynamoDB local | http://localhost:8002/shell |
+| DynamoDB Admin | http://localhost:8000/      |
 
 ## result
 
